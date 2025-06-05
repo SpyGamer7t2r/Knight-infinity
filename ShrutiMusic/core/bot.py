@@ -6,8 +6,7 @@ from pyrogram import Client, errors
 from pyrogram.enums import ChatMemberStatus, ParseMode
 
 import config
-from ..logging import LOG_GROUP_ID
-
+from ..logging import LOGGER
 
 class Aviax(Client):
     def __init__(self):
