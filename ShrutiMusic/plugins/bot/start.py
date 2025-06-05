@@ -88,10 +88,14 @@ async def start_pm(client, message: Message, _):
         out = private_panel(_)
         UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_photo(
-            photo=config.START_IMG_URL,
-            caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM),
-            reply_markup=InlineKeyboardMarkup(out),
-        )
+    photo="https://telegra.ph/file/36d6a1b0ea34bdfb14f2d.jpg",
+    caption=_.get("start_2", "Bot Started").format(
+        message.from_user.mention,
+        app.mention,
+        UP, DISK, CPU, RAM
+    ),
+    reply_markup=InlineKeyboardMarkup(out),
+)
         if await is_on_off(2):
             return await app.send_message(
                 chat_id=config.LOG_GROUP_ID,
