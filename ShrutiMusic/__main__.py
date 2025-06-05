@@ -1,9 +1,11 @@
 import asyncio
-import importlib
+ import importlib
 
 from pyrogram import idle from pytgcalls.exceptions import NoActiveGroupCall
 
-import config from ShrutiMusic import LOGGER, app, userbot from ShrutiMusic.core.call import Aviax from ShrutiMusic.misc import sudo from ShrutiMusic.plugins import ALL_MODULES from ShrutiMusic.utils.database import get_banned_users, get_gbanned from config import BANNED_USERS
+import config from ShrutiMusic
+ import LOGGER, app, userbot from ShrutiMusic.core.call 
+import Aviax from ShrutiMusic.misc import sudo from ShrutiMusic.plugins import ALL_MODULES from ShrutiMusic.utils.database import get_banned_users, get_gbanned from config import BANNED_USERS
 
 async def init(): if not any([config.STRING1, config.STRING2, config.STRING3, config.STRING4, config.STRING5]): LOGGER(name).error("Assistant client variables not defined, exiting...") return
 
