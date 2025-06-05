@@ -8,8 +8,8 @@ from pyrogram.enums import ChatMemberStatus, ParseMode
 import config
 from ..logging import LOGGER
 
-import uvloop:
-    uvloop.install():
+class Aviax(Client):
+    def init(self):
         LOGGER(name).info(f"Starting Bot...")
         super().init(
             name="ShrutiMusic",
