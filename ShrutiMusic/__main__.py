@@ -47,4 +47,5 @@ async def init():
         await Aviax.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
         LOGGER("ShrutiMusic").error(
-            "Please turn on the videochat of your log group/channel.\n
+    "Please turn on the videochat of your log group/channel.\nStopping the bot..."
+)
